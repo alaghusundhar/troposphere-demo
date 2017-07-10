@@ -1,7 +1,7 @@
 import json
 import nose.tools as nt
 
-from core.stack_dev import topics, template
+from tdemo.stack_dev import topics, template
 
 
 expected_topics_template = """

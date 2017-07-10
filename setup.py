@@ -19,7 +19,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'tdemo = core.main:main',
+            'tdemo = tdemo.core.main:main',
         ],
     },
     zip_safe=False,

@@ -22,7 +22,7 @@ Or simply clone it:
 >> git clone https://github.com/dsouzajude/troposphere-demo.git
 >> cd troposphere-demo
 >> pip install -r requirements.txt
->> python core/main.py -h
+>> python tdemo/core/main.py -h
 ```
 
 
@@ -36,15 +36,14 @@ template.
 
 Intention
 =========
-The intention behind this demo is to propose my structure for organizing python
+The intention behind this demo is to propose my structure for organizing troposphere
 templated files such that it can be made easy to manage more efficiently across
-many stacks. Each stack can be implemented as a python module within the "core"
-package that would contain the necessary python troposphere template files
-to generate the CloudFormation template.
+many stacks. Each stack can be implemented as a python module that contains the
+the necessary troposphere template files to generate the CloudFormation template.
 
-Each stack can then be managed by the [controller](https://github.com/dsouzajude/troposphere-demo/blob/master/core/main.py)
+Each stack can then be managed by the [controller](https://github.com/dsouzajude/troposphere-demo/blob/master/tdemo/core/main.py)
 that would take as input the stack module name and generate the template from it.
-Further on, from this template the stack can be created, updated or deleted from
+Further on, from this template the stack can be created, updated or deleted via
 the same controller.
 
 
@@ -79,13 +78,10 @@ optional arguments:
 
 Generating the sample template for the sample "stack_dev" stack:
 ----------------------------------------------------------------
-
-Note "stack_dev" stack is represented as a python module within the "core"
-package. All stacks that need to be created must lie within the core package for
-efficient management and maintainability.
+Note "stack_dev" stack is represented as a python module.
 
 ```bash
->> tdemo --generate core.stack_dev
+>> tdemo --generate tdemo.stack_dev
 
 ```
 
@@ -99,7 +95,7 @@ the CloudFormation template from the troposphere configuration and then creates
 the stack.
 
 ```bash
->> tdemo --create core.stack_dev Dev
+>> tdemo --create tdemo.stack_dev Dev
 ```
 
 Updating the stack:
@@ -109,7 +105,7 @@ template from the troposphere configuration and then updates the stack with the
 updated template.
 
 ```bash
->> tdemo --update core.stack_dev Dev
+>> tdemo --update tdemo.stack_dev Dev
 ```
 
 

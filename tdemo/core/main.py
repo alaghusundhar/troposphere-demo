@@ -8,7 +8,7 @@ import sys
 import importlib
 import argparse
 
-import core
+from tdemo.core import core
 
 
 def _parse_args():

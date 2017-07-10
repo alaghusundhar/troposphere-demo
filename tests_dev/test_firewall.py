@@ -1,7 +1,7 @@
 import json
 import nose.tools as nt
 
-from core.stack_dev import firewall, template
+from tdemo.stack_dev import firewall, template
 
 
 expected_firewall_template = """

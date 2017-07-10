@@ -1,7 +1,7 @@
 import json
 import nose.tools as nt
 
-from core.stack_dev import vpc, template
+from tdemo.stack_dev import vpc, template
 
 
 expected_vpc_template = """
