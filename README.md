@@ -16,15 +16,6 @@ which are boto3, troposphere, nose, mock and argparse.
 >> tdemo
 ```
 
-Or simply clone it:
-
-```bash
->> git clone https://github.com/dsouzajude/troposphere-demo.git
->> cd troposphere-demo
->> pip install -r requirements.txt
->> python tdemo/core/main.py -h
-```
-
 
 What this demo does?
 ====================
