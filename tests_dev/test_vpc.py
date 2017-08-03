@@ -198,6 +198,7 @@ expected_vpc_template = """
 
 """
 
+
 class TestVPCStack(object):
     def test_vpc(self):
         t = template

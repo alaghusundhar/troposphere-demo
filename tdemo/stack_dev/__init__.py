@@ -50,5 +50,7 @@ def generate_template():
     Importing the modules from the stack automatically creates required
     resources into the general template.
     """
-    import vpc, firewall, topics
+    import vpc
+    import firewall
+    import topics
     return template.to_json()

@@ -32,7 +32,9 @@ class TestCore(object):
     @patch('tdemo.core.core._stack_exists')
     @patch('botocore.client.BaseClient._make_api_call')
     @nt.raises(Exception)
-    def test_fails_to_create_stack_if_exists(self, mock_botoapi, mock_stack_exists):
+    def test_fails_to_create_stack_if_exists(self,
+                                             mock_botoapi,
+                                             mock_stack_exists):
         mock_stack_exists.return_value = True
         core.create_stack("MyStack", "{}")
         nt.assert_equals(mock_botoapi.call_count, 0)
@@ -47,7 +49,9 @@ class TestCore(object):
     @patch('tdemo.core.core._stack_exists')
     @patch('tdemo.core.core.boto3.client')
     @nt.raises(Exception)
-    def test_fails_to_update_stack_if_does_not_exist(self, mock_botoapi, mock_stack_exists):
+    def test_fails_to_update_stack_if_does_not_exist(self,
+                                                     mock_botoapi,
+                                                     mock_stack_exists):
         mock_stack_exists.return_value = False
         core.update_stack("MyStack", "{}")
         nt.assert_equals(mock_botoapi.call_count, 0)
@@ -62,7 +66,9 @@ class TestCore(object):
     @patch('tdemo.core.core._stack_exists')
     @patch('tdemo.core.core.boto3.client')
     @nt.raises(Exception)
-    def test_fails_to_delete_stack_if_does_not_exist(self, mock_botoapi, mock_stack_exists):
+    def test_fails_to_delete_stack_if_does_not_exist(self,
+                                                     mock_botoapi,
+                                                     mock_stack_exists):
         mock_stack_exists.return_value = False
         core.delete_stack("MyStack")
         nt.assert_equals(mock_botoapi.call_count, 0)

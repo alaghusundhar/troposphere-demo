@@ -19,29 +19,38 @@ def _parse_args():
     tdemo [--delete <STACK_NAME>]
     '''
     parser = argparse.ArgumentParser(
-                prog='python main.py',
-                usage='%(prog)s [options]',
-                description='Sample Troposphere to CloudFormation Demo project.')
-    parser.add_argument('--generate',
-                        type=str,
-                        nargs=1,
-                        metavar=("<STACK_MODULE>"),
-                        help='Generates a JSON CFN template from stack.')
-    parser.add_argument('--create',
-                        type=str,
-                        nargs=2,
-                        metavar=("<STACK_MODULE>","<STACK_NAME>"),
-                        help='Creates a stack.')
-    parser.add_argument('--update',
-                        type=str,
-                        nargs=2,
-                        metavar=("<STACK_MODULE>","<STACK_NAME>"),
-                        help='Updats a stack.')
-    parser.add_argument('--delete',
-                        type=str,
-                        nargs=1,
-                        metavar=("<STACK_NAME>"),
-                        help='Deletes a stack.')
+        prog='python main.py',
+        usage='%(prog)s [options]',
+        description='Sample Troposphere to CloudFormation Demo project.'
+    )
+    parser.add_argument(
+        '--generate',
+        type=str,
+        nargs=1,
+        metavar=("<STACK_MODULE>"),
+        help='Generates a JSON CFN template from stack.'
+    )
+    parser.add_argument(
+        '--create',
+        type=str,
+        nargs=2,
+        metavar=("<STACK_MODULE>", "<STACK_NAME>"),
+        help='Creates a stack.'
+    )
+    parser.add_argument(
+        '--update',
+        type=str,
+        nargs=2,
+        metavar=("<STACK_MODULE>", "<STACK_NAME>"),
+        help='Updats a stack.'
+    )
+    parser.add_argument(
+        '--delete',
+        type=str,
+        nargs=1,
+        metavar=("<STACK_NAME>"),
+        help='Deletes a stack.'
+    )
     return parser
 
 

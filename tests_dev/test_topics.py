@@ -48,6 +48,7 @@ expected_topics_template = """
 
 """
 
+
 class TestTopicsStack(object):
     def test_topics(self):
         t = template

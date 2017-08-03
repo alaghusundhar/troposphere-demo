@@ -297,6 +297,7 @@ expected_firewall_template = """
 
 """
 
+
 class TestFirewallStack(object):
     def test_firewall(self):
         t = template
